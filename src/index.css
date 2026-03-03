@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-terminal-bg: #0a1111;
+  --color-terminal-cyan: #06f9f9;
+  --color-terminal-cyan-dim: rgba(6, 249, 249, 0.1);
+  --color-terminal-cyan-border: rgba(6, 249, 249, 0.2);
+  --color-terminal-text: #e2e8f0;
+}
+
+@layer base {
+  body {
+    @apply bg-terminal-bg text-terminal-text font-sans antialiased selection:bg-terminal-cyan selection:text-terminal-bg;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(6, 249, 249, 0.05) 0%, transparent 50%),
+      linear-gradient(rgba(6, 249, 249, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 249, 249, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+  }
+}
+
+@layer components {
+  .terminal-border {
+    @apply border border-terminal-cyan-border bg-terminal-bg/80 backdrop-blur-md;
+  }
+  
+  .terminal-glow {
+    box-shadow: 0 0 15px rgba(6, 249, 249, 0.15);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
