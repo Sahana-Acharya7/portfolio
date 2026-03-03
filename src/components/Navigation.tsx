@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, Code, Briefcase, Trophy, Mail, ChevronRight, History, Award } from 'lucide-react';
+import { Home, Code, Briefcase, Trophy, Mail, ChevronRight, History, Award, GraduationCap } from 'lucide-react';
 
 interface NavProps {
   activeTab: string;
@@ -11,6 +11,7 @@ export const Navigation: React.FC<NavProps> = ({ activeTab, setActiveTab }) => {
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'experience', label: 'Experience', icon: History },
+    { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'skills', label: 'Skills', icon: Code },
     { id: 'projects', label: 'Projects', icon: Briefcase },
     { id: 'certifications', label: 'Certifications', icon: Award },

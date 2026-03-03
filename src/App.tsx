@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Navigation } from './components/Navigation';
 import { Home } from './components/Home';
 import { Experience } from './components/Experience';
+import { Education } from './components/Education';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { ProjectDetail } from './components/ProjectDetail';
@@ -42,6 +43,7 @@ const App: React.FC = () => {
     switch (activeTab) {
       case 'home': return <Home />;
       case 'experience': return <Experience />;
+      case 'education': return <Education />;
       case 'skills': return <Skills />;
       case 'projects': return <Projects onSelectProject={setSelectedProjectId} />;
       case 'certifications': return <Certifications />;

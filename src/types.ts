@@ -40,3 +40,12 @@ export interface Certification {
   link: string;
   description: string;
 }
+
+export interface Education {
+  id: string;
+  period: string;
+  program: string;
+  institution: string;
+  location: string;
+  score: string;
+}

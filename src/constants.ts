@@ -1,4 +1,4 @@
-import { Project, Achievement, Skill, Certification } from './types';
+import { Project, Achievement, Skill, Certification, Education } from './types';
 
 export const PROJECTS: Project[] = [
   {
@@ -95,6 +95,25 @@ export const ACHIEVEMENTS: Achievement[] = [
     icon: 'Trophy'
   },
 
+];
+
+export const EDUCATION: Education[] = [
+  {
+    id: 'rvce-ise',
+    period: '2024 – Present',
+    program: 'B.E. Information Science & Engineering',
+    institution: 'RV College of Engineering',
+    location: 'Bangalore',
+    score: 'Current CGPA: 8.14 (as of 4th semester)'
+  },
+  {
+    id: 'jss-diploma-cse',
+    period: '2021 – 2024',
+    program: 'Diploma in Computer Science and Engineering',
+    institution: 'JSS Polytechnic for Women',
+    location: 'Mysore',
+    score: 'Final CGPA: 9.8 (Distinction)'
+  }
 ];
 
 export const SKILLS: Skill[] = [
