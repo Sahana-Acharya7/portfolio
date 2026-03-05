@@ -9,7 +9,7 @@ export const Experience: React.FC = () => {
       company: "Techno Tut Solution LLP",
       location: "Mysore, Karnataka",
       role: "Full Stack Development Intern",
-      period: "June 2024 - Present",
+      period: "Jan 3rd 2024 – May 3rd 2024",
       description: "Leading the development of high-performance web and mobile solutions for enterprise clients.",
       highlights: [
         "Architected a real-time dashboard using React and Socket.io, improving data visualization speed by 40%.",
