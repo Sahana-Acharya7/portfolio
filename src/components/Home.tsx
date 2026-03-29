@@ -129,7 +129,7 @@ export const Home: React.FC<{ onNavigate?: (tab: string) => void }> = ({ onNavig
         {/* Latest Achievement */}
         <GlassPanel 
           className="p-6 flex flex-col justify-between group hover:border-terminal-cyan/40 transition-colors cursor-pointer"
-          onClick={() => onNavigate?.('achievements')}
+          onClick={() => window.open('https://ieeexplore.ieee.org/document/11295133', '_blank')}
         >
           <div className="space-y-4">
             <div className="w-10 h-10 rounded-lg bg-terminal-cyan/10 flex items-center justify-center text-terminal-cyan">
