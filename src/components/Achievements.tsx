@@ -13,7 +13,7 @@ const IconMap: Record<string, any> = {
 
 export const Achievements: React.FC = () => {
   return (
-    <div className="pt-20 pb-12 space-y-8">
+    <div id="achievements" className="pt-20 pb-12 space-y-8">
       <div className="space-y-1">
         <h2 className="text-2xl font-bold text-terminal-cyan tracking-tighter uppercase">Milestones</h2>
         <p className="text-xs text-terminal-cyan/40 font-mono tracking-widest">/root/achievements/history.log</p>

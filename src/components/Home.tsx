@@ -127,7 +127,10 @@ export const Home: React.FC = () => {
         </div>
 
         {/* Latest Achievement */}
-        <GlassPanel className="p-6 flex flex-col justify-between group hover:border-terminal-cyan/40 transition-colors">
+        <GlassPanel 
+          className="p-6 flex flex-col justify-between group hover:border-terminal-cyan/40 transition-colors cursor-pointer"
+          onClick={() => document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth' })}
+        >
           <div className="space-y-4">
             <div className="w-10 h-10 rounded-lg bg-terminal-cyan/10 flex items-center justify-center text-terminal-cyan">
               <Award size={20} />
