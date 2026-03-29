@@ -2,6 +2,25 @@ import { Project, Achievement, Skill, Certification, Education } from './types';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'personal-portfolio',
+    title: 'Personal Portfolio',
+    category: 'Web / Full Stack',
+    description: 'Interactive terminal-themed portfolio website showcasing projects, skills, research, and achievements with a modern, responsive design.',
+    longDescription: 'Built a full-featured portfolio website with a sleek terminal-inspired UI. Features dynamic project showcases with detailed case studies, interactive skills visualization, certifications gallery, educational background, and achievement highlights. Integrated responsive design for all devices and optimized performance with Vite. Includes smooth navigation, project filtering by category, and direct links to GitHub repositories and live demos.',
+    image: '/images/portfolio.jpeg',
+    imageFit: 'contain',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Responsive Design', 'UI/UX'],
+    links: {
+      github: 'https://github.com/Sahana-Acharya7/portfolio',
+      demo: 'https://sahanaacharya-portfolio.vercel.app/'
+    },
+    stats: [
+      { label: 'Theme', value: 'Terminal UI' },
+      { label: 'Performance', value: 'Optimized' },
+      { label: 'Responsive', value: '100%' }
+    ]
+  },
+  {
     id: 'smart-pantry',
     title: 'Smart Pantry Management',
     category: 'Mobile / AI',
@@ -20,28 +39,29 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    id: 'smart-parking',
-    title: 'Smart Parking System',
-    category: 'Web / IoT',
-    description: 'High-concurrency parking platform that optimized slot allocation efficiency by 45%.',
-    longDescription: 'Architected a full-stack solution using React and Node.js to manage real-time parking logistics. Developed a custom QR-based authentication protocol and integrated Twilio for automated SMS alerts. Optimized MySQL queries to handle 1000+ concurrent slot status updates per second.',
-    image: '',
-    tags: ['React', 'Node.js', 'MySQL', 'TypeScript', 'Twilio', 'Redis'],
+    id: 'govchat',
+    title: 'GovChat',
+    category: 'Web / AI',
+    description: 'AI-enabled e-governance portal for rural Karnataka bridging citizens and government departments with multilingual conversational support.',
+    longDescription: 'Built a full-stack AI-enabled e-governance portal bridging citizens and government departments for rural Karnataka. Implemented a RAG-based conversational AI with multilingual support for Kannada and English. Designed a three-pipeline architecture handling citizen interaction, government administration, and AI-driven routing across role-based user flows.',
+    image: '/images/Govchat.jpeg',
+    imageFit: 'contain',
+    tags: ['React.js', 'Next.js', 'Django REST Framework', 'PostgreSQL', 'Flutter', 'OpenStreetMap', 'Leaflet.js', 'Vision Transformer', 'Ollama', 'RAG', 'MCP', 'AI4Bharat', 'TTS', 'MinIO', 'Docker'],
     links: {
-      github: 'https://github.com/Sahana-Acharya7/smart-parking'
+      github: 'https://github.com/Sahana-Acharya7/GovChat'
     },
     stats: [
-      { label: 'Throughput', value: '1k req/s' },
-      { label: 'Efficiency', value: '+45%' },
-      { label: 'Uptime', value: '99.9%' }
+      { label: 'Languages', value: 'Kannada + English' },
+      { label: 'Pipelines', value: '3-tier Architecture' },
+      { label: 'Coverage', value: 'Rural KA' }
     ]
   },
   {
   id: 'smart-construction-waste-manager',
   title: 'Smart Construction Waste Manager (SCWM)',
   category: 'AI / Computer Vision',
-  description: 'AI-powered system for detecting construction waste and analyzing its environmental impact.',
-  longDescription: 'Built an end-to-end AI system using YOLOv8 for image-based construction waste detection with confidence scoring. Integrated a FastAPI backend to process scans and leveraged Groq LLMs to generate sustainability and environmental impact insights. Implemented Supabase for persistent storage and scan history tracking, with a React-based frontend for visualization and user interaction.',
+  description: 'AI-powered waste detection system with an integrated second-hand marketplace enabling creative reuse of materials like tiles for mosaic arts and e-waste for innovative projects.',
+  longDescription: 'Built an end-to-end AI system using YOLOv8 for image-based construction waste detection with confidence scoring. Integrated a FastAPI backend to process scans and leveraged Groq LLMs to generate sustainability and environmental impact insights. Implemented Supabase for persistent storage and scan history tracking, with a React-based frontend for visualization and user interaction. Created a second-hand marketplace platform enabling users to list detected waste materials for creative reuse—tiles for mosaic art projects, e-waste for innovative fabrication, and other construction materials—reducing landfill waste while fostering a community of makers and artists.',
   image: '/images/scwm.jpeg',
   tags: [
     'FastAPI',
@@ -49,7 +69,8 @@ export const PROJECTS: Project[] = [
     'Supabase',
     'Groq LLM',
     'React',
-    'Computer Vision'
+    'Computer Vision',
+    'Marketplace'
   ],
   links: {
     github: 'https://github.com/Sahana-Acharya7/scwm.git' // update if repo name differs
@@ -57,24 +78,24 @@ export const PROJECTS: Project[] = [
   stats: [
     { label: 'Detection', value: 'Real-time' },
     { label: 'Analysis', value: 'AI-driven' },
-    { label: 'Tracking', value: 'Scan history' }
+    { label: 'Marketplace', value: 'Creative Reuse' }
   ]
 },
   {
     id: 'campus-lost-found',
-    title: 'Campus Lost & Found System',
+    title: 'Lost & Found Management System',
     category: 'Web / Full Stack',
-    description: 'Centralized platform for campus-wide item tracking, reducing recovery time by 60%.',
-    longDescription: 'Developed a robust web application using React and Node.js to streamline the lost and found process. Implemented an automated matching algorithm to connect lost reports with found items based on metadata. Integrated a secure notification system and a searchable database with real-time status updates.',
+    description: 'Secure web-based platform with role-based access control, ownership verification, and admin-mediated claim processing for lost and found items.',
+    longDescription: 'Built a comprehensive web application enabling users to report lost or found items with detailed metadata, categories, and locations. Implemented a two-step ownership verification system using security questions and claim evidence. Designed role-based dashboards for users (report tracking, claim submission) and administrators (claim review, action history, statistics). Features secure authentication, automated status updates, and comprehensive claim management with admin remarks and approval workflows.',
     image: '/images/lostandfound.jpeg',
-    tags: ['HTML', 'CSS', 'JavaScript', 'postgres', 'JWT', 'Cloudinary'],
+    tags: ['Python', 'Flask', 'PostgreSQL', 'SQLite', 'HTML5', 'CSS3', 'Werkzeug', 'Psycopg2', 'RBAC'],
     links: {
       github: 'https://github.com/Sahana-Acharya7/Lost-Found-Management.git'
     },
     stats: [
-      { label: 'Recovery Time', value: '-60%' },
-      { label: 'Active Users', value: '1.2k' },
-      { label: 'Items Found', value: '450+' }
+      { label: 'Authentication', value: 'Secure' },
+      { label: 'Access Control', value: 'Role-Based' },
+      { label: 'Verification', value: '2-Step' }
     ]
   }
 ];

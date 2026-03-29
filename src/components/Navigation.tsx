@@ -10,10 +10,10 @@ interface NavProps {
 export const Navigation: React.FC<NavProps> = ({ activeTab, setActiveTab }) => {
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
-    { id: 'experience', label: 'Experience', icon: History },
-    { id: 'education', label: 'Education', icon: GraduationCap },
-    { id: 'skills', label: 'Skills', icon: Code },
     { id: 'projects', label: 'Projects', icon: Briefcase },
+    { id: 'experience', label: 'Experience', icon: History },
+    { id: 'skills', label: 'Skills', icon: Code },
+    { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'certifications', label: 'Certifications', icon: Award },
     { id: 'achievements', label: 'Achievements', icon: Trophy },
     { id: 'contact', label: 'Contact', icon: Mail },

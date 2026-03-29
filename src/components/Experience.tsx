@@ -110,9 +110,11 @@ export const Experience: React.FC = () => {
           </div>
           <div className="space-y-1">
             <h4 className="text-terminal-cyan font-bold uppercase tracking-widest text-sm">Seeking New Opportunities</h4>
-            <p className="text-xs text-terminal-cyan/40 font-mono">Open for SDE Internships & Full-time Roles starting 2024</p>
+            <p className="text-xs text-terminal-cyan/40 font-mono">Open for SDE Internships & Full-time Roles starting 2026</p>
           </div>
-          <button className="px-6 py-2 bg-terminal-cyan/10 border border-terminal-cyan/30 text-terminal-cyan text-xs font-mono uppercase tracking-widest rounded hover:bg-terminal-cyan/20 transition-all">
+          <button 
+            onClick={() => window.open('/resume/resume.pdf', '_blank')}
+            className="px-6 py-2 bg-terminal-cyan/10 border border-terminal-cyan/30 text-terminal-cyan text-xs font-mono uppercase tracking-widest rounded hover:bg-terminal-cyan/20 transition-all">
             View_Full_Resume.pdf
           </button>
         </div>
