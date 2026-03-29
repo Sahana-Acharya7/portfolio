@@ -40,8 +40,11 @@ export const TerminalWindow: React.FC<TerminalWindowProps> = ({ title, children,
   );
 };
 
-export const GlassPanel: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <div className={`terminal-border rounded-xl p-6 ${className}`}>
+export const GlassPanel: React.FC<{ children: React.ReactNode; className?: string; onClick?: () => void }> = ({ children, className = '', onClick }) => (
+  <div 
+    className={`terminal-border rounded-xl p-6 ${className}`}
+    onClick={onClick}
+  >
     {children}
   </div>
 );
