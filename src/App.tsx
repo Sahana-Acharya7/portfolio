@@ -41,7 +41,7 @@ const App: React.FC = () => {
     }
 
     switch (activeTab) {
-      case 'home': return <Home />;
+      case 'home': return <Home onNavigate={setActiveTab} />;
       case 'experience': return <Experience />;
       case 'education': return <Education />;
       case 'skills': return <Skills />;
@@ -49,7 +49,7 @@ const App: React.FC = () => {
       case 'certifications': return <Certifications />;
       case 'achievements': return <Achievements />;
       case 'contact': return <Contact />;
-      default: return <Home />;
+      default: return <Home onNavigate={setActiveTab} />;
     }
   };
 

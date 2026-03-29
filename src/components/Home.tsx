@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { TerminalWindow, GlassPanel } from './Common';
 import { User, Cpu, Globe, Zap, Code, Download, Award, Briefcase, Star, Activity, Terminal as TerminalIcon } from 'lucide-react';
 
-export const Home: React.FC = () => {
+export const Home: React.FC<{ onNavigate?: (tab: string) => void }> = ({ onNavigate }) => {
   return (
     <div className="pt-24 pb-20 space-y-12">
       {/* Hero Section: Editorial Style */}
@@ -129,7 +129,7 @@ export const Home: React.FC = () => {
         {/* Latest Achievement */}
         <GlassPanel 
           className="p-6 flex flex-col justify-between group hover:border-terminal-cyan/40 transition-colors cursor-pointer"
-          onClick={() => document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => onNavigate?.('achievements')}
         >
           <div className="space-y-4">
             <div className="w-10 h-10 rounded-lg bg-terminal-cyan/10 flex items-center justify-center text-terminal-cyan">
