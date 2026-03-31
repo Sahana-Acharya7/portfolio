@@ -8,12 +8,12 @@ export const Certifications: React.FC = () => {
   return (
     <div className="pt-24 pb-12 space-y-8">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row items-end justify-between gap-4 border-b border-terminal-cyan/10 pb-6">
+      <div className="flex flex-col md:flex-row items-end justify-between gap-4 border-b border-accent/10 pb-6">
         <div className="space-y-1">
-          <h2 className="text-3xl font-bold text-terminal-cyan tracking-tighter uppercase">Certifications</h2>
-          <p className="text-xs text-terminal-cyan/40 font-mono tracking-widest">/root/system/credentials.verify</p>
+          <h2 className="text-3xl font-bold text-accent tracking-tighter uppercase">Certifications</h2>
+          <p className="text-xs text-accent/40 font-mono tracking-widest">/root/system/credentials.verify</p>
         </div>
-        <div className="hidden md:flex gap-4 text-[10px] font-mono text-terminal-cyan/30 uppercase tracking-widest">
+        <div className="hidden md:flex gap-4 text-[10px] font-mono text-accent/30 uppercase tracking-widest">
           <span>Verified_Certs: {CERTIFICATIONS.length}</span>
           <span>Status: AUTHENTICATED</span>
         </div>
@@ -31,7 +31,7 @@ export const Certifications: React.FC = () => {
             <TerminalWindow title={`${cert.id}.cert`} className="h-full">
               <div className="flex flex-col h-full">
                 {/* Image Section */}
-                <div className="relative aspect-video mb-6 overflow-hidden rounded border border-terminal-cyan/10 group">
+                <div className="relative aspect-video mb-6 overflow-hidden rounded border border-accent/10 group">
                   <img 
                     src={cert.image} 
                     alt={cert.title} 
@@ -44,28 +44,28 @@ export const Certifications: React.FC = () => {
                 <div className="space-y-4 flex-1">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="text-xl font-bold text-terminal-cyan tracking-tight">{cert.title}</h3>
-                      <div className="flex items-center gap-2 mt-1 text-terminal-cyan/60 font-mono text-xs uppercase">
+                      <h3 className="text-xl font-bold text-accent tracking-tight">{cert.title}</h3>
+                      <div className="flex items-center gap-2 mt-1 text-accent/60 font-mono text-xs uppercase">
                         <ShieldCheck size={12} />
                         <span>{cert.issuer}</span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1.5 text-terminal-cyan/40 font-mono text-[10px] uppercase">
+                    <div className="flex items-center gap-1.5 text-accent/40 font-mono text-[10px] uppercase">
                       <Calendar size={10} />
                       <span>{cert.date}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm text-terminal-cyan/80 leading-relaxed font-mono italic">
+                  <p className="text-sm text-accent/80 leading-relaxed font-mono italic">
                     {cert.description}
                   </p>
 
-                  <div className="pt-4 border-t border-terminal-cyan/5 flex justify-between items-center">
+                  <div className="pt-4 border-t border-accent/5 flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                      <span className="text-[10px] font-mono text-terminal-cyan/40 uppercase">Verified_On_Chain</span>
+                      <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                      <span className="text-[10px] font-mono text-accent/40 uppercase">Verified_On_Chain</span>
                     </div>
-                    <span className="text-[10px] font-mono text-terminal-cyan/20">ID: {cert.id.toUpperCase()}</span>
+                    <span className="text-[10px] font-mono text-accent/20">ID: {cert.id.toUpperCase()}</span>
                   </div>
                 </div>
               </div>

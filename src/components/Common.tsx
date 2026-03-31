@@ -12,21 +12,21 @@ interface TerminalWindowProps {
 export const TerminalWindow: React.FC<TerminalWindowProps> = ({ title, children, className = '', delay = 0 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3, delay }}
-      className={`terminal-border rounded-lg overflow-hidden flex flex-col terminal-glow ${className}`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      className={`card-border rounded-lg overflow-hidden flex flex-col ${className}`}
     >
       {/* Title Bar */}
-      <div className="bg-terminal-cyan/10 border-b border-terminal-cyan-border px-4 py-2 flex items-center justify-between">
+      <div className="bg-accent-dim border-b border-accent-border px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Terminal size={14} className="text-terminal-cyan" />
-          <span className="text-xs font-mono text-terminal-cyan/80 uppercase tracking-widest">{title}</span>
+          <Terminal size={14} className="text-accent" />
+          <span className="text-xs font-mono text-accent/80 uppercase tracking-widest">{title}</span>
         </div>
         <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-terminal-cyan/20 border border-terminal-cyan-border" />
-          <div className="w-2.5 h-2.5 rounded-full bg-terminal-cyan/20 border border-terminal-cyan-border" />
-          <div className="w-2.5 h-2.5 rounded-full bg-terminal-cyan/40 border border-terminal-cyan-border" />
+          <div className="w-2.5 h-2.5 rounded-full bg-accent/20 border border-accent-border" />
+          <div className="w-2.5 h-2.5 rounded-full bg-accent/20 border border-accent-border" />
+          <div className="w-2.5 h-2.5 rounded-full bg-accent/40 border border-accent-border" />
         </div>
       </div>
       
@@ -42,7 +42,7 @@ export const TerminalWindow: React.FC<TerminalWindowProps> = ({ title, children,
 
 export const GlassPanel: React.FC<{ children: React.ReactNode; className?: string; onClick?: () => void }> = ({ children, className = '', onClick }) => (
   <div 
-    className={`terminal-border rounded-xl p-6 ${className}`}
+    className={`card-border rounded-xl p-6 ${className}`}
     onClick={onClick}
   >
     {children}

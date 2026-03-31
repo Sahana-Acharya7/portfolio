@@ -25,8 +25,8 @@ export const Experience: React.FC = () => {
   return (
     <div className="pt-20 pb-12 space-y-8 max-w-5xl mx-auto">
       <div className="space-y-2">
-        <h2 className="text-3xl font-bold text-terminal-cyan tracking-tighter">EXPERIENCE</h2>
-        <p className="text-terminal-cyan/60 font-mono text-sm uppercase tracking-widest">Professional_Journey.log</p>
+        <h2 className="text-3xl font-bold text-accent tracking-tighter">EXPERIENCE</h2>
+        <p className="text-accent/60 font-mono text-sm uppercase tracking-widest">Professional_Journey.log</p>
       </div>
 
       <div className="space-y-12">
@@ -36,23 +36,23 @@ export const Experience: React.FC = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="relative pl-8 border-l border-terminal-cyan/20"
+            className="relative pl-8 border-l border-accent/20"
           >
             {/* Timeline Dot */}
-            <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-terminal-cyan shadow-[0_0_10px_rgba(6,249,249,0.5)]" />
+            <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-accent" />
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               <div className="lg:col-span-4">
                 <div className="sticky top-24 space-y-4">
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold text-terminal-cyan">{exp.role}</h3>
-                    <div className="flex items-center gap-2 text-terminal-cyan/60 font-mono text-xs">
+                    <h3 className="text-xl font-bold text-accent">{exp.role}</h3>
+                    <div className="flex items-center gap-2 text-accent/60 font-mono text-xs">
                       <Briefcase size={12} />
                       <span>{exp.company}</span>
                     </div>
                   </div>
                   
-                  <div className="space-y-2 text-xs font-mono text-terminal-cyan/40">
+                  <div className="space-y-2 text-xs font-mono text-accent/40">
                     <div className="flex items-center gap-2">
                       <Calendar size={12} />
                       <span>{exp.period}</span>
@@ -65,7 +65,7 @@ export const Experience: React.FC = () => {
 
                   <div className="flex flex-wrap gap-2 pt-2">
                     {exp.skills.map(skill => (
-                      <span key={skill} className="px-2 py-1 bg-terminal-cyan/5 border border-terminal-cyan/20 rounded text-[10px] text-terminal-cyan/60 font-mono">
+                      <span key={skill} className="px-2 py-1 bg-accent/5 border border-accent/20 rounded text-[10px] text-accent/60 font-mono">
                         {skill}
                       </span>
                     ))}
@@ -76,19 +76,19 @@ export const Experience: React.FC = () => {
               <div className="lg:col-span-8">
                 <TerminalWindow title={`${exp.company.toLowerCase().replace(/\s+/g, '_')}_details.txt`}>
                   <div className="space-y-6">
-                    <p className="text-terminal-cyan/80 leading-relaxed italic">
+                    <p className="text-accent/80 leading-relaxed italic">
                       "{exp.description}"
                     </p>
                     
                     <div className="space-y-4">
-                      <h4 className="text-xs font-bold text-terminal-cyan uppercase tracking-widest flex items-center gap-2">
+                      <h4 className="text-xs font-bold text-accent uppercase tracking-widest flex items-center gap-2">
                         <Award size={14} />
                         Key_Contributions
                       </h4>
                       <ul className="space-y-3">
                         {exp.highlights.map((highlight, i) => (
-                          <li key={i} className="flex gap-3 text-sm text-terminal-cyan/70">
-                            <CheckCircle2 size={16} className="text-terminal-cyan shrink-0 mt-0.5" />
+                          <li key={i} className="flex gap-3 text-sm text-accent/70">
+                            <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
                             <span>{highlight}</span>
                           </li>
                         ))}
@@ -103,18 +103,18 @@ export const Experience: React.FC = () => {
       </div>
 
       {/* Certifications or Other Experience */}
-      <GlassPanel className="p-8 border-dashed border-terminal-cyan/20 bg-transparent">
+      <GlassPanel className="p-8 border-dashed border-accent/20 bg-transparent">
         <div className="flex flex-col items-center text-center space-y-4">
-          <div className="w-12 h-12 rounded-full border border-terminal-cyan/20 flex items-center justify-center text-terminal-cyan/40">
+          <div className="w-12 h-12 rounded-full border border-accent/20 flex items-center justify-center text-accent/40">
             <Briefcase size={24} />
           </div>
           <div className="space-y-1">
-            <h4 className="text-terminal-cyan font-bold uppercase tracking-widest text-sm">Seeking New Opportunities</h4>
-            <p className="text-xs text-terminal-cyan/40 font-mono">Open for SDE Internships & Full-time Roles starting 2026</p>
+            <h4 className="text-accent font-bold uppercase tracking-widest text-sm">Seeking New Opportunities</h4>
+            <p className="text-xs text-accent/40 font-mono">Open for SDE Internships & Full-time Roles starting 2026</p>
           </div>
           <button 
             onClick={() => window.open('/resume/resume.pdf', '_blank')}
-            className="px-6 py-2 bg-terminal-cyan/10 border border-terminal-cyan/30 text-terminal-cyan text-xs font-mono uppercase tracking-widest rounded hover:bg-terminal-cyan/20 transition-all">
+            className="px-6 py-2 bg-accent/10 border border-accent/30 text-accent text-xs font-mono uppercase tracking-widest rounded hover:bg-accent/20 transition-all">
             View_Full_Resume.pdf
           </button>
         </div>

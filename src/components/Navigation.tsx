@@ -20,14 +20,14 @@ export const Navigation: React.FC<NavProps> = ({ activeTab, setActiveTab }) => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-terminal-bg/80 backdrop-blur-md border-b border-terminal-cyan-border px-6 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg border-b border-accent-border px-6 py-3 transition-all">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2 font-mono text-sm">
-          <span className="text-terminal-cyan font-bold">SYSTEM_OS</span>
-          <ChevronRight size={14} className="text-terminal-cyan/40" />
-          <span className="text-terminal-cyan/60">root</span>
-          <ChevronRight size={14} className="text-terminal-cyan/40" />
-          <span className="text-terminal-cyan animate-pulse">{activeTab}</span>
+          <span className="text-accent font-bold">SYSTEM_OS</span>
+          <ChevronRight size={14} className="text-accent/40" />
+          <span className="text-accent/60">root</span>
+          <ChevronRight size={14} className="text-accent/40" />
+          <span className="text-accent">{activeTab}</span>
         </div>
 
         <div className="flex items-center gap-1">
@@ -43,8 +43,8 @@ export const Navigation: React.FC<NavProps> = ({ activeTab, setActiveTab }) => {
                   flex items-center gap-2 px-4 py-1.5 rounded-md transition-all duration-200
                   font-mono text-xs uppercase tracking-wider
                   ${isActive 
-                    ? 'bg-terminal-cyan text-terminal-bg shadow-[0_0_10px_rgba(6,249,249,0.5)]' 
-                    : 'text-terminal-cyan/60 hover:text-terminal-cyan hover:bg-terminal-cyan/5'}
+                    ? 'bg-accent text-bg transition-all duration-200' 
+                    : 'text-accent/60 hover:text-accent hover:bg-accent/5 transition-all duration-150'}
                 `}
               >
                 <Icon size={14} />
